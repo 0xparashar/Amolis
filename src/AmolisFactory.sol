@@ -18,9 +18,8 @@ import {AmolisVaultController} from "./AmolisVaultController.sol";
 
 /**
  * @title AmolisFactory
- * @author Ankit Parashar
  * @notice This contract bootstraps a reusable oracle, one Morpho market, one VaultV2, and one constrained controller
- * for a user-provided XUSD token.
+ * for a user-provided USD pegged stablecoin token. We will call it XUSD.
  *
  * It does not keep an on-chain mapping from XUSD to a single deployment; the same XUSD can be used for many independent
  * vault stacks (each with its own controller, vault, and adapter), typically sharing one Morpho market and oracle when

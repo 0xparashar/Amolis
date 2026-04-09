@@ -12,7 +12,6 @@ import {MAX_MAX_RATE, WAD} from "@morpho-vault/src/libraries/ConstantsLib.sol";
 
 /**
  * @title AmolisVaultController
- * @author Amolis
  * @notice Permanent owner and curator of one Amolis VaultV2: narrow owner-gated configuration and deposit whitelist gates.
  */
 contract AmolisVaultController is IReceiveSharesGate, ISendAssetsGate {
