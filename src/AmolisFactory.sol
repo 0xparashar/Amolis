@@ -136,9 +136,7 @@ contract AmolisFactory {
         if (MORPHO.market(marketIdValue).lastUpdate == 0) MORPHO.createMarket(marketParams);
 
         controller = address(
-            new AmolisVaultController{
-                salt: keccak256(abi.encode(msg.sender, _salt))
-            }(
+            new AmolisVaultController{salt: keccak256(abi.encode(msg.sender, _salt))}(
                 msg.sender,
                 address(VAULT_V2_FACTORY),
                 address(MORPHO_MARKET_V1_ADAPTER_V2_FACTORY),
